@@ -8,12 +8,11 @@ let allWords = [thirdWord, firtsWord, secondWord].join(" ");
 console.log("Перше завдання:", allWords);
 
 // Solution for the second task
-let youNumber = +prompt ("Введіть п'ятизначне число:");
-if (youNumber < 10000 || youNumber > 99999) {
-    youNumber = +prompt ("Було введено не п'ятизначне число, остання спроба:");
+let youNumber = +prompt("Введіть п'ятизначне число:");
+
+while (youNumber < 10000 || youNumber > 99999) {
+    youNumber = +prompt("Було введено не п'ятизначне число, сбробуйте ще раз:");
 }
-else {
-    let result = youNumber.toString().split('');
-    console.log("Друге завдання:", result.join (' '));
-}
-confirm ("Як що в консолі ви бачете рішення другого завдання, ви все зробили вірно. Як що ні, в другий раз Вам пощастить. Гарного дня!")
+
+let result = youNumber.toString().split('');
+console.log("Друге завдання:", result.join(' '));
